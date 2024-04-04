@@ -1,0 +1,11 @@
+This is the findings of the pybank data file :
+
+The total number of month in this data is 86
+
+The profit/Loss for the entire peiod is : 22564198.0$
+
+The avg p/l for the total period is : 262374.4$
+
+The greatest increase happened in Feb-14 with an amount of 1825558.0$
+
+Finaly the greatest decrease happened in Aug-16 with an amount of -1862002.0$
