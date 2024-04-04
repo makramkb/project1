@@ -8,7 +8,7 @@ file = os.path.join("..","pybank","Resources","budget_data.csv")
 import csv
 date_data = []
 pl_data = []
-greatest_inc = []
+monthly_change = []
 with open(file,'r') as budget:
     csv_reader = csv.reader(budget,delimiter=',')
     header = next(budget)
@@ -24,12 +24,12 @@ with open(file,'r') as budget:
     print(f'the p/l for this period is : {profit_loss}')
     print(f'the avg is {avg_pl}')
     for j in range(len(pl_data)):
-        greatest_inc_value = float(pl_data[j-1])-float(pl_data[j])
-        greatest_inc.append(greatest_inc_value)
-    inc_date = date_data[greatest_inc.index(max(greatest_inc))]
-    dec_date = date_data[greatest_inc.index(min(greatest_inc))]
-    print(f'greatest inc in value is {max(greatest_inc)} that happened on {inc_date}')
-    print(f'the least increase in values is {min(greatest_inc)} that happened on {dec_date}')
+        monthly_change_value = float(pl_data[j-1])-float(pl_data[j])
+        monthly_change.append(monthly_change_value)
+    inc_date = date_data[monthly_change.index(max(monthly_change))]
+    dec_date = date_data[monthly_change.index(min(monthly_change))]
+    print(f'greatest inc in value is {max(monthly_change)} that happened on {inc_date}')
+    print(f'the least increase in values is {min(monthly_change)} that happened on {dec_date}')
 
 analysis_path = os.path.join('..','pybank','The_analysis.txt')
 with open(analysis_path,'w') as analysis_txt:
@@ -41,9 +41,9 @@ with open(analysis_path,'w') as analysis_txt:
     analysis_txt.write('\n')
     analysis_txt.write(f'The avg p/l for the total period is : {avg_pl}$\n')
     analysis_txt.write('\n')
-    analysis_txt.write(f'The greatest increase happened in {inc_date} with an amount of {max(greatest_inc)}$\n')
+    analysis_txt.write(f'The greatest increase happened in {inc_date} with an amount of {max(monthly_change)}$\n')
     analysis_txt.write('\n')
-    analysis_txt.write(f'Finaly the greatest decrease happened in {dec_date} with an amount of {min(greatest_inc)}$')
+    analysis_txt.write(f'Finaly the greatest decrease happened in {dec_date} with an amount of {min(monthly_change)}$')
    
     
   
