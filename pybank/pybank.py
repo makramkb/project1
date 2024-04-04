@@ -30,6 +30,20 @@ with open(file,'r') as budget:
     dec_date = date_data[greatest_inc.index(min(greatest_inc))]
     print(f'greatest inc in value is {max(greatest_inc)} that happened on {inc_date}')
     print(f'the least increase in values is {min(greatest_inc)} that happened on {dec_date}')
+
+analysis_path = os.path.join('..','pybank','The_analysis.txt')
+with open(analysis_path,'w') as analysis_txt:
+    analysis_txt.write(f'This is the findings of the pybank data file :\n')
+    analysis_txt.write('\n')
+    analysis_txt.write(f'The total number of month in this data is {total}\n')
+    analysis_txt.write('\n')
+    analysis_txt.write(f'The profit/Loss for the entire peiod is : {profit_loss}$\n')
+    analysis_txt.write('\n')
+    analysis_txt.write(f'The avg p/l for the total period is : {avg_pl}$\n')
+    analysis_txt.write('\n')
+    analysis_txt.write(f'The greatest increase happened in {inc_date} with an amount of {max(greatest_inc)}$\n')
+    analysis_txt.write('\n')
+    analysis_txt.write(f'Finaly the greatest decrease happened in {dec_date} with an amount of {min(greatest_inc)}$')
    
     
   
