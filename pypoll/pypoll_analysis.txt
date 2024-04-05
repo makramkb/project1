@@ -1,0 +1,9 @@
+The total votes received in this campaign is 369711
+
+The candidates who participated are : ['Charles Casper Stockham', 'Diana DeGette', 'Raymon Anthony Doane']
+
+The votes received pre candidates are as follow : [85213, 272892, 11606]
+
+The total percentage received per candidate is [23.05, 73.81, 3.14]
+
+The winner is Diana DeGette with 73.81 %

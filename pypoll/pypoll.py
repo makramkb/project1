@@ -34,4 +34,15 @@ with open(file_path,'r') as election:
     print(f'The winner is {candidates_list[candidate_count.index(max(candidate_count))]} with {candidate_percentagge_vote[candidate_count.index(max(candidate_count))]} %')
 
 
+pypoll_analysis_path = os.path.join('..','pypoll','pypoll_analysis.txt')
+with open(pypoll_analysis_path,'w') as pypoll:
+    pypoll.write(f'The total votes received in this campaign is {total_votes}\n')
+    pypoll.write('\n')
+    pypoll.write(f'The candidates who participated are : {candidates_list}\n')
+    pypoll.write('\n')
+    pypoll.write(f'The votes received pre candidates are as follow : {candidate_count}\n')
+    pypoll.write('\n')
+    pypoll.write(f'The total percentage received per candidate is {candidate_percentagge_vote}\n')
+    pypoll.write('\n')
+    pypoll.write(f'The winner is {candidates_list[candidate_count.index(max(candidate_count))]} with {candidate_percentagge_vote[candidate_count.index(max(candidate_count))]} %')
 
